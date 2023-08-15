@@ -2,6 +2,10 @@
 <html>
   <head>
     <title> Bugendai Careers </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
     <style>
       h1{
       color:rgb(200,100,100);  
@@ -15,7 +19,13 @@
       At BugendaiTech, we provide trailblazing software that streamlines your business operations and helps you stay ahead of the competition. From project management to financial tracking, our easy-to-use tools empower your team to work more efficiently and effectively. Discover the power of our software and take your business to the next level.
     </p>
     <h2>Open Positions</h2>
-    <p>TO DO-Show the jobs here</p>
-    <button> Contact Us</button>
+    <div>
+      {% for job in jobs %}
+       {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg">
+   Contact Us</button>
   </body>
 </html>
